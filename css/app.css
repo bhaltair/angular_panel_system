@@ -1,0 +1,136 @@
+
+body {
+	background: #efefef;
+}
+.header {
+	height: 60px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0px 1px #eee;
+	line-height: 60px;
+	position: relative;
+}
+.header h1 {
+	margin: 0;
+	line-height: 60px;
+
+}
+.header a{
+	text-decoration: none;
+}
+
+.header p {
+	margin-bottom: 0;
+}
+
+
+.header .header-time {
+	padding-left: 400px;
+}
+
+.nav {
+	width: 300px;
+	float: left;
+}
+.main {
+	margin-left: 310px;
+	padding: 20px;
+}
+.nav,
+.main {
+	min-height: 500px;
+	box-shadow: 1px 2px 2px #eee;
+	background: #fff;
+	margin-top: 10px;
+}
+
+
+
+/* 登录样式 */
+.login-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #efefef;
+}
+.login-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 300px;
+	margin: -150px -200px;
+	background: #fff;
+	box-shadow: 1px 1px 2px #ccc;
+	border-radius: 5px;
+}
+.login-inner h2 {
+	border-bottom: 1px solid #ccc;
+	margin: 0 20px;
+	padding-top: 10px;
+	line-height: 60px;
+	text-align: center;
+}
+.login-inner .form-group {
+	margin: 10px 0 20px;
+}
+.login-inner input {
+	padding: 3px 10px;
+	width: 210px;
+}
+.login-inner label {
+	text-indent: 40px;
+}
+.login-inner .warning {
+	height: 20px;
+	overflow: hidden;
+	padding-left: 100px;
+}
+.login-inner .btn-container {
+	margin: 20px;
+	width: 330px;
+}
+.login-inner .btn-container .btn {
+	display: block;
+	width: 100%;
+}
+
+
+.main-title th,
+.main-title td{
+	border: 1px solid #ccc;
+    padding: 7px;
+}
+.main-inner .form-group {
+	height: 40px;
+}
+
+.main-inner {
+	padding: 20px;
+	text-align: left;
+}
+
+.main-inner .t-r {
+	text-align: right;
+}
+
+.main-inner h2 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.main-inner .list .row,
+.main-inner .userlist .row,
+.main-inner .detail .row {
+	height: 40px;
+	line-height: 40px;
+}
+
+.pagination {
+	position: fixed;
+	bottom: 100px;
+	right: 40px;
+}

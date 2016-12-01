@@ -1,0 +1,51 @@
+<div class="main-inner">
+	<h2>创建用户</h2>
+	<div class="content">
+		<form name="createUser" ng-submit="submitUser()" method="POST">
+			<div class="row form-group">
+				<div class="col-lg-3 t-r"><label for="userName">用户名：</label></div>
+				<div class="col-lg-4">
+					<input type="text" id="userName" name="userName" ng-model="user.username" ng-required="true" ng-minlength="4" ng-maxlength="8" placeholder="请输入您的昵称">
+				</div>
+				<div class="col-lg-5">
+					<!-- 输入过 并且不合法 -->
+					<span class="text-danger" ng-show="createUser.userName.$dirty && createUser.userName.$invalid">用户名是必填的，长度4-12位</span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-3 t-r"><label for="passWord">密&emsp;码：</label></div>
+				<div class="col-lg-4">
+					<input type="password" id="passWord" name="passWord" ng-model="user.password" ng-required="true" placeholder="请输入用户密码">
+				</div>
+				<div class="col-lg-5"><span class="text-danger" ng-show="createUser.passWord.$dirty && createUser.passWord.$invalid">用户密码必填</span></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-3 t-r"><label for="tel">电&emsp;话：</label></div>
+				<div class="col-lg-4">
+					<input type="text" id="tel" name="tel" ng-model="user.tel" ng-pattern="/^1\d{10}$/" placeholder="请输入电话号码" ng-required="true">
+				</div>
+				<div class="col-lg-5"><span class="text-danger" ng-show="createUser.tel.$dirty && createUser.tel.$invalid">电话号码是以1开头11为数字</span></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-3 t-r"><label>性&emsp;别：</label></div>
+				<div class="col-lg-4 f-radio">
+					<label>男：<input type="radio" value="男" name="sex" ng-model="user.sex" checked="checked"></label>
+					<label>女：<input type="radio" value="女" name="sex" ng-model="user.sex"></label>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-3 t-r"><label for="info">简&emsp;介：</label></div>
+				<div class="col-lg-4">
+					<textarea name="info" id="info" ng-model="user.info" ng-required="true" placeholder="请输入用户简介"></textarea>
+				</div>
+				<div class="col-lg-5"><span class="text-danger" ng-show="createUser.info.$dirty && createUser.info.$invalid">简介是必填的</span></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-offset-3 col-lg-4">
+					<!-- 通过button按钮触发submit事件 -->
+					<button class="btn btn-success" ng-disabled=" !createUser.sex.$dirty  || createUser.$invalid " type="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

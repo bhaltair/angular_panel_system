@@ -1,0 +1,26 @@
+<div class="login-container">
+	<div class="login-inner">
+		<h2 class="login-header">请您登录</h2>
+		<form class="container" name="login" ng-submit="goToLogin()">
+			<div class="form-group">
+				<label for="userName">用户名：</label>
+				<input type="text" id="userName" ng-model="user.username" name="username" ng-required="true" placeholder="请输入用户名">
+			</div>
+			<div class="form-group">
+				<label for="passWord">密&emsp;码：</label>
+				<input type="password" id="passWord" ng-model="user.password" name="password" ng-required="true" placeholder="请输入密码">
+			</div>
+			<div class="warning text-danger">
+				<!-- 修改以后不合法 -->
+				<p ng-show="login.username.$dirty && login.username.$invalid">用户名是必填的</p>
+				<p ng-show="login.password.$dirty && login.password.$invalid">密码是必填的</p>
+				<p ng-show="passwordError">密码错误</p>
+			</div>
+			<div class="btn-container">
+				<!-- 当form合法的时候，这个按钮才可以点击,所以不合法才是disabled -->
+				<!-- 触发submit事件必须是类式为submit的元素 -->
+				<button type="submit" ng-disabled="login.$invalid" class="btn btn-success">提交</button>
+			</div>
+		</form>
+	</div>
+</div>

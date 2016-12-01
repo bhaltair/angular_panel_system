@@ -1,0 +1,25 @@
+<div class="main-inner">
+	<div class="main-title home">
+		<!-- 现在的时间是：2016-11-24 10:55:53 -->
+		<h2>北京天气</h2>
+		<table>
+			<tr>
+				<td>日期</td>
+				<td>温度</td>
+				<td>天气</td>
+				<td>风速</td>
+				<td>日间</td>
+				<td>夜间</td>
+			</tr>
+			<tr ng-repeat="item in weatherData">
+				<td>{{item.date}}</td>
+				<td>{{item.temperature}}</td>
+				<td>{{item.weather}}</td>
+				<td>{{item.wind}}</td>
+				<td><img ng-src="{{item.dayPictureUrl}}" ></td>
+				<td><img ng-src="{{item.nightPictureUrl}}" ></td>
+			</tr>
+		</table>
+
+	</div>
+</div>

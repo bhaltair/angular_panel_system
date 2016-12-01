@@ -1,0 +1,22 @@
+<div class="main-inner">
+	<h2>新闻详情</h2>
+	<div class="content detail">
+		<div class="row">
+			<div class="col-lg-2 t-r">新闻标题：</div>
+			<div class="col-lg-10" ng-bind="news.title"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 t-r">新闻作者：</div>
+			<div class="col-lg-10" ng-bind="news.writer"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 t-r">发布日期：</div>
+			<!-- 2016-02-18 23:20:22 -->
+			<div class="col-lg-10" ng-bind="news.time | date : 'yyyy-MM-dd HH:mm:ss'"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 t-r">新闻内容：</div>
+			<div class="col-lg-10" ng-bind="news.content"></div>
+		</div>
+	</div>
+</div>

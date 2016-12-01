@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+
+    <div class="app" ng-app="myApp">
+        <div class="header" ng-controller="headerCtrl">
+            <div class="container">
+                <p class="pull-right">
+                    <span>欢迎你，</span>
+                    <span class="username">{{username}}</span>
+                    <a href="action/logout.php">退出登录</a>
+                </p>
+                <a href="#home" class="pull-left"><h1>某管理系统</h1></a>
+                <span class=" header-time">{{date | date : 'yyyy-MM-dd HH:mm:ss'}}</span>
+            </div>
+        </div>
+        <div class="nav" ng-controller="navCtl">
+            <ul>
+                <li ng-repeat="item in list">
+                    <h3 ng-bind="item.title"></h3>
+                    <!-- 创建子模块列表 -->
+                    <ul>
+                        <li ng-repeat="childItem in item.childList">
+                            <a ng-href="{{childItem.link}}" ng-bind="childItem.subTitle"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>            
+        </div>
+        <div class="main"  ui-view>
+        </div>
+    </div>
+
+
+    <script src="js/angular-1-4-1.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>

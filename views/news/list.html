@@ -1,0 +1,22 @@
+<div class="main-inner">
+	<h2>新闻列表</h2>
+	<div class="content list">
+		<div class="row title">
+			<div class="col-lg-2">新闻ID</div>
+			<div class="col-lg-4">新闻标题</div>
+			<div class="col-lg-3">新闻作者</div>
+			<div class="col-lg-3">新闻时间</div>
+		</div>
+		<div class="row" ng-repeat="item in list">
+			<div class="col-lg-2"><a href="#/newsdetail/{{item.id}}" ng-bind="item.id"></a></div>
+			<div class="col-lg-4" ng-bind="item.title"></div>
+			<div class="col-lg-3" ng-bind="item.writer"></div>
+			<!-- 2016-02-18 23:20:22 -->
+			<div class="col-lg-3" ng-bind="item.time | date : 'yyyy-MM-dd HH:mm:ss'"></div>
+		</div>
+		<ul class="pull-right pagination">
+			<li><a href="#/newslist/{{+num - 1 < 1 ? 1 : +num - 1}}">前一页</a></li>
+			<li><a href="#/newslist/{{+num + 1}}">后一页</a></li>
+		</ul>
+	</div>
+</div>
